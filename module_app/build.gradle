@@ -68,6 +68,7 @@ android {
             debuggable true
         }
     }
+    buildToolsVersion '29.0.3'
 
 
 }
@@ -75,7 +76,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation deps.support.multidex
-    implementation project(':lib_common')
+    implementation project(path: ':lib_common')
     if (!isModule.toBoolean()) {
         implementation project(':module_main')
         implementation project(':module_girls')
